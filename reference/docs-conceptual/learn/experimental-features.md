@@ -93,7 +93,7 @@ enables coloring of specific file types.
   The **Extension** member pre-includes extensions for archive and PowerShell files.
 
 For more information, see
-[about_Automatic_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Automatic_Variables).
+[about_Automatic_Variables](/powershell/module/Microsoft.PowerShell.Core/About/about_Automatic_Variables)
 
 > [!NOTE]
 > You must have the **PSAnsiRendering** experimental feature enabled to use this feature.
@@ -203,7 +203,7 @@ Exposes an API to allow assembly loading from native code.
 When this experimental feature is enabled PowerShell uses the `ArgumentList` property of the
 `StartProcessInfo` object rather than our current mechanism of reconstructing a string when invoking
 a native executable.
-
+z
 > [!CAUTION]
 > The new behavior is a **breaking change** from current behavior. This may break scripts and
 > automation that work around the various issues when invoking native applications. Historically,
