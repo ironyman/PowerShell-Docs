@@ -1,0 +1,197 @@
+---
+title: PowerShell Core Support Lifecycle
+description: Details the policies governing support for PowerShell
+ms.date: 11/11/2020
+---
+# PowerShell Support Lifecycle
+
+> [!NOTE]
+> This document is about support for PowerShell. Windows PowerShell (1.0 - 5.1) is a component
+> of the Windows OS. Components receive the same support as their parent product or platform. For
+> more information, see [Product and Services Lifecycle Information](/lifecycle/products/).
+
+PowerShell continues to be supported under the [Microsoft Modern Lifecycle Policy][modern], but
+support dates are linked to [.NET Core's support lifecycle][Long-Term]. In this servicing approach,
+customers can choose Long Term Support (LTS) releases or current releases.
+
+A **current** release is a release that occurs between LTS releases. Current releases can contain
+critical fixes, innovations, and new features. A current release is supported for three months after
+the next current or LTS release.
+
+> [!IMPORTANT]
+> You must have the latest patch update installed to qualify for support. For example, if you're
+> running PowerShell 7.0 and 7.0.1 has been released, you must update to 7.0.1 to qualify for
+> support.
+
+PowerShell runs on multiple operating systems (OS) and processor architectures. In order to be
+supported by Microsoft, the must meet the following criteria:
+
+- The version and processor architecture of the OS is supported by .NET Core.
+- The version of the OS is supported for at least one year.
+- The version of the OS is not an interim release or equivalent.
+- The version of the OS is currently supported by the OS publisher.
+- The PowerShell team has tested the version of the distribution.
+
+When a platform version reaches end-of-life as defined by the platform owner, PowerShell also ends
+support on that platform version. Previously released packages remain available for customers
+needing access but formal support and updates of any kind are no longer be provided.
+
+## Supported platforms
+
+Support for PowerShell on a specific platforms is based on the support policy of the version of .NET
+used.
+
+- PowerShell 7.2 (LTS-preview) is based on the [.NET 6.0 Supported OS Lifecycle Policy][net60os]
+- PowerShell 7.1 (current) is based on the [.NET 5.0 Supported OS Lifecycle Policy][net50os]
+- PowerShell 7.0 (LTS) is based on the [.NET Core 3.1 Supported OS Lifecycle Policy][net31os]
+
+### Windows support
+
+### macOS support
+
+### Linux support
+
+#### Alpine
+
+[!INCLUDE [Alpine support](../../includes/alpine-support.md)]
+
+#### CentOS
+
+[!INCLUDE [CentOS support](../../includes/centos-support.md)]
+
+#### Debian
+
+[!INCLUDE [Debian support](../../includes/debian-support.md)]
+
+#### Fedora
+
+[!INCLUDE [Fedora support](../../includes/fedora-support.md)]
+
+#### openSUSE
+
+[!INCLUDE [openSUSE support](../../includes/opensuse-support.md)]
+
+#### Red Hat Enterprise Linux (RHEL)
+
+[!INCLUDE [RHEL support](../../includes/rhel-support.md)]
+
+#### Ubuntu
+
+[!INCLUDE [Ubuntu support](../../includes/ubuntu-support.md)]
+
+#### Raspberry Pi OS
+
+[Raspberry Pi OS][raspbian] (formerly Raspbian) is a free operating system based on Debian.
+
+> [!IMPORTANT]
+> .NET is not supported on ARMv6 architecture devices, including Raspberry Pi Zero and Raspberry Pi
+> devices prior to Raspberry Pi 2.
+
+## PowerShell releases end of life
+
+Based on the [Lifecycle of PowerShell](#lifecycle-of-powershell-7), the following table lists
+the dates when various releases will no longer be supported.
+
+| Version |          End-of-life           |
+| :-----: | ------------------------------ |
+|   7.1   | mid-February 2022  (projected) |
+|   7.0   | December 3, 2022               |
+|   6.2   | September 4, 2020              |
+|   6.1   | September 28, 2019             |
+|   6.0   | February 13, 2019              |
+
+## Notes on licensing
+
+PowerShell Core is released under the [MIT license][mit]. Under this license, and without a paid
+support agreement, users are limited to [community support][community]. With community support,
+Microsoft makes no guarantees of responsiveness or fixes.
+
+## Windows PowerShell Compatibility
+
+The support lifecycle for PowerShell doesn't cover modules that ship outside of the PowerShell
+release package. For example, using the `ActiveDirectory` module that ships as part of Windows
+Server is supported under the [Windows Support Lifecycle][lifecycle].
+
+## Experimental features
+
+[Experimental features][exp] are limited to [community support](#community-support).
+
+## Security Servicing Criteria
+
+PowerShell follows the [Microsoft Security Servicing Criteria for Windows][mssec].
+The table below outlines the features that meet the servicing criteria and those that do not.
+
+|                  Feature                   |       Type       |
+| ------------------------------------------ | ---------------- |
+| System Lockdown - with WDAC                | Security Feature |
+| Constrained language mode - with WDAC      | Security Feature |
+| System Lockdown - with AppLocker           | Defense in Depth |
+| Constrained language mode - with AppLocker | Defense in Depth |
+| Execution Policy                           | Defense in Depth |
+
+> [!NOTE]
+> There is a corner-case scenario in AppLocker where you only have **Deny** rules and constrained
+> language mode is not used to enforce the policy that allowed you to bypass the execution policy.
+> Beginning in PowerShell 7.2, a change was made to ensure that AppLocker rules would take
+> precedence over a `Set-ExecutionPolicy -ExecutionPolicy Bypass` command.
+
+For more information about AppLocker and Windows Defender Application Control (WDAC), see
+[Application Controls for Windows][WDAC].
+
+## Release history
+
+The following table contains a timeline of the major releases of PowerShell. This table is provided
+for historical reference. It is not intended for use to determine the support lifecycle.
+
+|           Version            | Release Date |                                       Note                                       |
+| ---------------------------- | :----------: | -------------------------------------------------------------------------------- |
+| PowerShell 7.2 (LTS-preview) |     TBD      | Built on .NET 6.0 (LTS-preview).                                                 |
+| PowerShell 7.1 (current)     |   Nov-2020   | Built on .NET 5.0 (current).                                                     |
+| PowerShell 7.0 (LTS)         |   Mar-2020   | Built on .NET Core 3.1 (LTS).                                                    |
+| PowerShell 6.2               |   Mar-2019   |                                                                                  |
+| PowerShell 6.1               |   Sep-2018   | Built on .NET Core 2.1.                                                          |
+| PowerShell 6.0               |   Jan-2018   | First release, built on .NET Core 2.0. Installable on Windows, Linux, and macOS. |
+| Windows PowerShell 5.1       |   Aug-2016   | Released in Windows 10 Anniversary Update and Windows Server 2016, WMF 5.1       |
+| Windows PowerShell 5.0       |   Feb-2016   | Released in Windows Management Framework (WMF) 5.0                               |
+| Windows PowerShell 4.0       |   Oct-2013   | Integrated in Windows 8.1 and with Windows Server 2012 R2, WMF 4.0               |
+| Windows PowerShell 3.0       |   Oct-2012   | Integrated in Windows 8 and with Windows Server 2012 WMF 3.0                     |
+| Windows PowerShell 2.0       |   Jul-2009   | Integrated in Windows 7 and Windows Server 2008 R2, WMF 2.0                      |
+| Windows PowerShell 1.0       |   Nov-2006   | Optional component of Windows Server 2008                                        |
+
+## Getting support
+
+PowerShell is a distinct set of tools and components that is shipped, installed, and configured
+separately from Windows PowerShell. PowerShell is not included in the Windows licensing agreements.
+
+PowerShell is supported under traditional Microsoft support agreements, including
+[paid support][paid], [Microsoft Enterprise Agreements][enterprise-agreement], and
+[Microsoft Software Assurance][assurance]. You can also pay for [assisted support][assisted] for
+PowerShell by filing a support request for your problem.
+
+## Community support
+
+We also offer [community support][community] on GitHub where you can file an issues or request
+features. You may also find help from other members of the community in the Microsoft
+[PowerShell Tech Community][pscommunity] or any of the forums listed on the
+[PowerShell Community resources][pshub] page.
+
+<!-- hyperlink references -->
+
+[paid]: https://support.serviceshub.microsoft.com/supportforbusiness
+[enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise
+[assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default
+[community]: /powershell/scripting/community/community-support
+[pshub]: /powershell/scripting/community/community-support
+[pscommunity]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+[assisted]: https://support.microsoft.com/assistedsupportproducts
+[modern]: /lifecycle/policies/modern
+[Long-Term]: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+[semi-annual]: /windows-server/get-started-19/servicing-channels-19
+[mit]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+[lifecycle]: /lifecycle/faq/windows
+[exp]: /powershell/scripting/learn/experimental-features
+[mssec]: https://www.microsoft.com/msrc/windows-security-servicing-criteria
+[WDAC]: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control
+[net60os]: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
+[net50os]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
+[net31os]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
