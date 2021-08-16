@@ -6,17 +6,22 @@ ms.date: 11/11/2020
 # PowerShell Support Lifecycle
 
 > [!NOTE]
-> This document is about support for PowerShell. Windows PowerShell (1.0 - 5.1) is a component
-> of the Windows OS. Components receive the same support as their parent product or platform. For
-> more information, see [Product and Services Lifecycle Information](/lifecycle/products/).
+> This document is about support for PowerShell. Windows PowerShell (1.0 - 5.1) is a component of
+> the Windows operating system. Components receive the same support as their parent product or
+> platform. For more information, see
+> [Product and Services Lifecycle Information](/lifecycle/products/).
 
-PowerShell continues to be supported under the [Microsoft Modern Lifecycle Policy][modern], but
-support dates are linked to [.NET Core's support lifecycle][Long-Term]. In this servicing approach,
-customers can choose Long Term Support (LTS) releases or current releases.
+PowerShell is supported under the [Microsoft Modern Lifecycle Policy][modern], but support dates are
+linked to [.NET Core's support lifecycle][Long-Term]. In this servicing approach, customers can
+choose Long Term Support (LTS) releases or current releases.
+
+An **LTS** release of PowerShell is built on an LTS release of .NET. Updates to an LTS release only
+contain critical security updates and servicing fixes that are designed to minimize impact to
+existing workloads. LTS releases of PowerShell are supported until the end-of-support for .NET.
 
 A **current** release is a release that occurs between LTS releases. Current releases can contain
 critical fixes, innovations, and new features. A current release is supported for three months after
-the next current or LTS release.
+the next release (current or LTS).
 
 > [!IMPORTANT]
 > You must have the latest patch update installed to qualify for support. For example, if you're
@@ -36,6 +41,20 @@ When a platform version reaches end-of-life as defined by the platform owner, Po
 support on that platform version. Previously released packages remain available for customers
 needing access but formal support and updates of any kind are no longer be provided.
 
+## PowerShell End-of-support dates
+
+Based on these lifecycle policies, the following table lists the dates when various releases are no
+longer be supported.
+
+|      Version      |      End-of-support       |
+| :---------------: | ------------------------- |
+| 7.2 (LTS-preview) | November 2024 (projected) |
+|   7.1 (current)   | March 2022  (projected)   |
+|     7.0 (LTS)     | December 3, 2022          |
+|        6.2        | September 4, 2020         |
+|        6.1        | September 28, 2019        |
+|        6.0        | February 13, 2019         |
+
 ## Supported platforms
 
 Support for PowerShell on a specific platforms is based on the support policy of the version of .NET
@@ -47,7 +66,11 @@ used.
 
 ### Windows support
 
+[!INCLUDE [Windows support](../../includes/windows-support.md)]
+
 ### macOS support
+
+[!INCLUDE [macOS support](../../includes/macOS-support.md)]
 
 ### Linux support
 
@@ -87,25 +110,6 @@ used.
 > .NET is not supported on ARMv6 architecture devices, including Raspberry Pi Zero and Raspberry Pi
 > devices prior to Raspberry Pi 2.
 
-## PowerShell releases end of life
-
-Based on the [Lifecycle of PowerShell](#lifecycle-of-powershell-7), the following table lists
-the dates when various releases will no longer be supported.
-
-| Version |          End-of-life           |
-| :-----: | ------------------------------ |
-|   7.1   | mid-February 2022  (projected) |
-|   7.0   | December 3, 2022               |
-|   6.2   | September 4, 2020              |
-|   6.1   | September 28, 2019             |
-|   6.0   | February 13, 2019              |
-
-## Notes on licensing
-
-PowerShell Core is released under the [MIT license][mit]. Under this license, and without a paid
-support agreement, users are limited to [community support][community]. With community support,
-Microsoft makes no guarantees of responsiveness or fixes.
-
 ## Windows PowerShell Compatibility
 
 The support lifecycle for PowerShell doesn't cover modules that ship outside of the PowerShell
@@ -138,6 +142,29 @@ The table below outlines the features that meet the servicing criteria and those
 For more information about AppLocker and Windows Defender Application Control (WDAC), see
 [Application Controls for Windows][WDAC].
 
+## Notes on licensing
+
+PowerShell Core is released under the [MIT license][mit]. Under this license, and without a paid
+support agreement, users are limited to [community support][community]. With community support,
+Microsoft makes no guarantees of responsiveness or fixes.
+
+## Getting support
+
+PowerShell is a distinct set of tools and components that is shipped, installed, and configured
+separately from Windows PowerShell. PowerShell is not included in the Windows licensing agreements.
+
+PowerShell is supported under traditional Microsoft support agreements, including
+[paid support][paid], [Microsoft Enterprise Agreements][enterprise-agreement], and
+[Microsoft Software Assurance][assurance]. You can also pay for [assisted support][assisted] for
+PowerShell by filing a support request for your problem.
+
+## Community support
+
+We also offer [community support][community] on GitHub where you can file an issues or request
+features. You may also find help from other members of the community in the Microsoft
+[PowerShell Tech Community][pscommunity] or any of the forums listed on the
+[PowerShell Community resources][pshub] page.
+
 ## Release history
 
 The following table contains a timeline of the major releases of PowerShell. This table is provided
@@ -157,23 +184,6 @@ for historical reference. It is not intended for use to determine the support li
 | Windows PowerShell 3.0       |   Oct-2012   | Integrated in Windows 8 and with Windows Server 2012 WMF 3.0                     |
 | Windows PowerShell 2.0       |   Jul-2009   | Integrated in Windows 7 and Windows Server 2008 R2, WMF 2.0                      |
 | Windows PowerShell 1.0       |   Nov-2006   | Optional component of Windows Server 2008                                        |
-
-## Getting support
-
-PowerShell is a distinct set of tools and components that is shipped, installed, and configured
-separately from Windows PowerShell. PowerShell is not included in the Windows licensing agreements.
-
-PowerShell is supported under traditional Microsoft support agreements, including
-[paid support][paid], [Microsoft Enterprise Agreements][enterprise-agreement], and
-[Microsoft Software Assurance][assurance]. You can also pay for [assisted support][assisted] for
-PowerShell by filing a support request for your problem.
-
-## Community support
-
-We also offer [community support][community] on GitHub where you can file an issues or request
-features. You may also find help from other members of the community in the Microsoft
-[PowerShell Tech Community][pscommunity] or any of the forums listed on the
-[PowerShell Community resources][pshub] page.
 
 <!-- hyperlink references -->
 
@@ -195,3 +205,5 @@ features. You may also find help from other members of the community in the Micr
 [net60os]: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
 [net50os]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
 [net31os]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
+[raspbian]: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
