@@ -11,7 +11,7 @@ items:
 - name: Install
   items:
   - name: Overview
-    href: install/installing-powershell.md
+    href: install/installing-powershell.yml
   - name: Installing PowerShell on Windows
     href: install/installing-powershell-on-windows.md
   - name: Installing PowerShell on Linux
@@ -38,14 +38,16 @@ items:
       href: install/community-support.md
     - name: Alternate ways to install on Linux
       href: install/install-other-linux.md
-    - name: PowerShell support lifecycle
-      href: install/powershell-support-lifecycle.md
-  - name: macOS
+  - name: Installing PowerShell on macOS
     href: install/installing-powershell-on-macos.md
   - name: Support for Arm processors
     href: install/powershell-on-arm.md
   - name: Using PowerShell in Docker
     href: install/PowerShell-in-Docker.md
+  - name: Microsoft Update FAQ
+    href: install/microsoft-update-faq.yml
+  - name: PowerShell support lifecycle
+    href: install/powershell-support-lifecycle.md
 - name: Learning PowerShell
   items:
   - name: PowerShell 101
