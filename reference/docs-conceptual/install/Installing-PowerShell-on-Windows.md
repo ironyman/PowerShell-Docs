@@ -108,7 +108,8 @@ the following ZIP archives from the [current release][current] page.
 Depending on how you download the file you may need to unblock the file using the `Unblock-File`
 cmdlet. Unzip the contents to the location of your choice and run `pwsh.exe` from there. Unlike
 installing the MSI packages, installing the ZIP archive doesn't check for prerequisites. For
-remoting over WSMan to work properly, ensure that you've met the [prerequisites](#prerequisites).
+remoting over WSMan to work properly, ensure that you've met the
+[prerequisites](#powershell-remoting).
 
 Use this method to install the ARM-based version of PowerShell on computers like the Microsoft
 Surface Pro X. For best results, install PowerShell to the to `$env:ProgramFiles\PowerShell\7`
@@ -274,7 +275,7 @@ Benefits of the Microsoft Store package:
 - Automatic updates built right into Windows 10
 - Integrates with other software distribution mechanisms like Intune and SCCM
 
-## Known limitations
+### Known limitations
 
 Windows Store packages run in an application sandbox that virtualizes access to some filesystem and
 registry locations.
@@ -288,7 +289,7 @@ registry locations.
 For more information, see
 [Understanding how packaged desktop apps run on Windows](/windows/msix/desktop/desktop-to-uwp-behind-the-scenes).
 
-## How to create a remoting endpoint
+## PowerShell remoting
 
 PowerShell supports the PowerShell Remoting Protocol (PSRP) over both WSMan and SSH. For more
 information, see:
