@@ -33,7 +33,7 @@ landingContent:
           - text: Install on macOS
             url: Installing-PowerShell-on-macOS.md
           - text: Supported macOS releases
-            url: Installing-PowerShell-on-macOS.md#supported-versions-of-mac-os
+            url: Installing-PowerShell-on-macOS.md#supported-versions-of-macos
 
   # Card
   - title: Linux
@@ -58,10 +58,6 @@ landingContent:
             url: install-rhel.md
           - text: Ubuntu
             url: install-ubuntu.md
-          - text: Alternate install methods
-            url: install-other-linux.md
-          - text: Community supported Linux
-            href: community-support.md
 
 # Card
   - title: "Q&A"
@@ -70,6 +66,8 @@ landingContent:
         links:
           - text: Alternate install methods
             url: install-other-linux.md
+          - text: Community supported Linux
+            url: community-support.md
           - text: Using PowerShell in Docker
             url: PowerShell-in-Docker.md
           - text: Arm Processor support
