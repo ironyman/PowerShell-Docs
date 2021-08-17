@@ -30,12 +30,12 @@ package from the [releases][releases] page onto the Debian 10 machine. The link 
 version is:
 
 - PowerShell 7.2-preview.8 - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-preview_7.2.0-preview.8-1.deb_amd64.deb`
-- PowerShell 7.1.3
-  - Debian 10 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell_7.1.3-1.debian.10_amd64.deb`
-  - Debian 9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell_7.1.3-1.debian.9_amd64.deb`
-- PowerShell 7.0.6
-  - Debian 10 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/powershell-lts_7.0.6-1.debian.10_amd64.deb`
-  - Debian 9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/powershell-lts_7.0.6-1.debian.9_amd64.deb`
+- PowerShell 7.1.4
+  - Debian 10 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell_7.1.4-1.debian.10_amd64.deb`
+  - Debian 9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell_7.1.4-1.debian.9_amd64.deb`
+- PowerShell 7.0.7
+  - Debian 10 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-lts_7.0.7-1.debian.10_amd64.deb`
+  - Debian 9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-lts_7.0.7-1.debian.9_amd64.deb`
 
 Use the following shell commands to install the package you downloaded. Change the filename to match
 the PowerShell and OS version that you downloaded.

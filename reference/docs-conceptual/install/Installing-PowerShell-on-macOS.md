@@ -10,12 +10,18 @@ PowerShell 7.0 or higher require macOS 10.13 and higher. All packages are availa
 [releases][releases] page. After the package is installed, run `pwsh` from a terminal.
 
 > [!NOTE]
-> PowerShell 7.1 is an in-place upgrade that removes PowerShell Core 6.x and 7.0.
+> PowerShell 7.2 is an in-place upgrade that removes previous versions of PowerShell 6.x and 7.x.
 >
 > The `/usr/local/microsoft/powershell/6` folder is replaced by `/usr/local/microsoft/powershell/7`.
 >
-> If you need to run an older version of PowerShell core side-by-side with PowerShell 7.1, install
+> If you need to run an older version of PowerShell side-by-side with PowerShell 7.2, install
 > the version you want using the [binary archive](#binary-archives) method.
+
+## Supported versions of macOS
+
+[!INCLUDE [macOS support](../../includes/macos-support.md)]
+
+## Installation of latest stable release via Homebrew on macOS 10.13 or higher
 
 There are several ways to install PowerShell on macOS. Choose one of the following methods:
 
@@ -25,8 +31,6 @@ There are several ways to install PowerShell on macOS. Choose one of the followi
 
 After installing PowerShell, you should install [OpenSSL](#installing-dependencies). OpenSSL is
 needed for PowerShell remoting and CIM operations.
-
-## Installation of latest stable release via Homebrew on macOS 10.13 or higher
 
 If the `brew` command is not found, you need to install Homebrew following
 [their instructions][brew].
@@ -122,13 +126,20 @@ brew upgrade powershell
 
 ## Installation via Direct Download
 
-Download the PKG package `powershell-7.1.3-osx-x64.pkg` from the [releases][releases] page onto your
-macOS machine.
+PowerShell 7.2 addes support for the Apple M1 processor. Download the install package from the
+[releases][releases] page onto your computer. The links to the current versions are:
 
-You can double-click the file and follow the prompts, or install it from the terminal:
+- PowerShell 7.2-preview.8
+  - x64 processors - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-7.2.0-preview.8-osx-x64.pkg`
+  - M1 processors - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-7.2.0-preview.8-osx-arm64.pkg`
+- PowerShell 7.1.4 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-osx-x64.pkg`
+- PowerShell 7.0.7 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-7.0.7-osx-x64.pkg`
+
+You can double-click the file and follow the prompts, or install it from the terminal using the
+following commands. Change the name of the file to match the file you downloaded.
 
 ```sh
-sudo installer -pkg powershell-7.1.3-osx-x64.pkg -target /
+sudo installer -pkg powershell-7.1.4-osx-x64.pkg -target /
 ```
 
 Install [OpenSSL](#installing-dependencies). OpenSSL is needed for PowerShell remoting and CIM
@@ -167,21 +178,33 @@ operations.
 
 ### Installing binary archives on macOS
 
+Download the install package from the [releases][releases] page onto your computer. The links to the
+current versions are:
+
+- PowerShell 7.2-preview.8
+  - x64 processors - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-7.2.0-preview.8-osx-x64.tar.gz`
+  - M1 processors - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-7.2.0-preview.8-osx-arm64.tar.gz`
+- PowerShell 7.1.4 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-osx-x64.tar.gz`
+- PowerShell 7.0.7 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-7.0.7-osx-x64.tar.gz`
+
+Use the following commands to install PowerShell from the binary archive. Change the download URL to
+match the version you want to install.
+
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/7.1.3
+sudo mkdir -p /usr/local/microsoft/powershell/7.1.4
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.3
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.1.4
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/7.1.3/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.1.4/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/7.1.3/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.1.4/pwsh /usr/local/bin/pwsh
 ```
 
 ## Installing dependencies
@@ -234,7 +257,7 @@ and remove the paths using `sudo rm`.
 
 ## Paths
 
-- `$PSHOME` is `/usr/local/microsoft/powershell/7.1.3/`
+- `$PSHOME` is `/usr/local/microsoft/powershell/7.1.4/`
 - User profiles will be read from `~/.config/powershell/profile.ps1`
 - Default profiles will be read from `$PSHOME/profile.ps1`
 - User modules will be read from `~/.local/share/powershell/Modules`
@@ -248,7 +271,7 @@ exists at `Microsoft.PowerShell_profile.ps1` in the same locations.
 PowerShell respects the [XDG Base Directory Specification][xdg-bds] on macOS.
 
 Because macOS is a derivation of BSD, the prefix `/usr/local` is used instead of `/opt`. So,
-`$PSHOME` is `/usr/local/microsoft/powershell/7.1.3/`, and the symbolic link is placed at
+`$PSHOME` is `/usr/local/microsoft/powershell/7.1.4/`, and the symbolic link is placed at
 `/usr/local/bin/pwsh`.
 
 ## Installation support

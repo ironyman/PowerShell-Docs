@@ -39,24 +39,24 @@ The installer creates a shortcut in the Windows Start Menu.
 - You can launch PowerShell via the Start Menu or `$env:ProgramFiles\PowerShell\<version>\pwsh.exe`
 
 > [!NOTE]
-> PowerShell 7.1 installs to a new directory and runs side-by-side with Windows PowerShell 5.1.
-> PowerShell 7.1 is an in-place upgrade that replaces PowerShell 6.x. or PowerShell 7.0.
+> PowerShell 7.2 installs to a new directory and runs side-by-side with Windows PowerShell 5.1.
+> PowerShell 7.2 is an in-place upgrade that replaces PowerShell 6.x. and higher.
 >
-> - PowerShell 7.1 is installed to `$env:ProgramFiles\PowerShell\7`
+> - PowerShell 7.2 is installed to `$env:ProgramFiles\PowerShell\7`
 > - The `$env:ProgramFiles\PowerShell\7` folder is added to `$env:PATH`
 > - Folders for previously released versions are deleted
 >
 > Preview releases of PowerShell 7 install to `$env:ProgramFiles\PowerShell\7-preview` so they can
 > be run side-by-side with non-preview releases of PowerShell.
 >
-> If you need to run PowerShell 7.1 side-by-side with other versions, use the [ZIP install](#zip)
+> If you need to run PowerShell 7.2 side-by-side with other versions, use the [ZIP install](#zip)
 > method to install the other version to a different folder.
 
 ### Support for Microsoft Update
 
-PowerShell 7.2 add support for Microsoft Update. When you enable this feature, you'll get the latest
-PowerShell 7 updates in your traditional Windows Update (WU) management flow, whether that's with
-Windows Update for Business, WSUS, SCCM, or the interactive WU dialog in Settings.
+PowerShell 7.2 adds support for Microsoft Update. When you enable this feature, you'll get the
+latest PowerShell 7 updates in your traditional Windows Update (WU) management flow, whether that's
+with Windows Update for Business, WSUS, SCCM, or the interactive WU dialog in Settings.
 
 The PowerShell 7.2 MSI package includes following command-line options:
 

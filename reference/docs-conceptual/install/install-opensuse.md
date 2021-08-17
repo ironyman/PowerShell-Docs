@@ -35,8 +35,8 @@ sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v
 
 Download the tar.gz package from the [releases][releases] page onto your openSUSE computer.
 
-- PowerShell 7.1.3 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-x64.tar.gz`
-- PowerShell 7.0.6 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/powershell-7.0.6-linux-x64.tar.gz`
+- PowerShell 7.1.4 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-linux-x64.tar.gz`
+- PowerShell 7.0.7 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-7.0.7-linux-x64.tar.gz`
 
 Use the following shell commands to download and install the package. Change the URL to match the
 PowerShell version that you want.
@@ -46,7 +46,7 @@ PowerShell version that you want.
 zypper update && zypper --non-interactive install curl tar gzip libopenssl1_0_0 libicu60_2
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
 mkdir -p /opt/microsoft/powershell/7

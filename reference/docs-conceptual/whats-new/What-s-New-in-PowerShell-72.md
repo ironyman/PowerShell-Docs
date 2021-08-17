@@ -6,7 +6,7 @@ ms.date: 05/25/2021
 
 # What's New in PowerShell 7.2
 
-On November {X}, 2021 we [announced][] the general availability of PowerShell 7.2. The
+On November {X}, 2021 we [announced][announced] the general availability of PowerShell 7.2. The
 long-term-servicing (LTS) release is built on .NET 6.0.
 
 PowerShell 7.2 includes the following features, updates, and breaking changes.
@@ -22,7 +22,7 @@ PowerShell 7.2 includes the following features, updates, and breaking changes.
 - 7 experimental features promoted to mainstream and 1 removed
 - Several breaking changes to improve usability
 
-For a complete list of changes, see the [CHANGELOG][] in the GitHub repository.
+For a complete list of changes, see the [CHANGELOG][CHANGELOG] in the GitHub repository.
 
 ## Improved DSC support in PowerShell 7
 
@@ -58,23 +58,19 @@ Additional work that we are considering, but may not make it as part of the init
 
 Check the installation instructions for your preferred operating system:
 
-- [Windows][]
-  - [Microsoft Store package][]
-- [macOS][]
-- [Linux][]
+- [Windows][Windows]
+- [macOS][macOS]
+- [Linux][Linux]
 
 Additionally, PowerShell 7.2 supports ARM32 and ARM64 flavors of Debian, Ubuntu, and ARM64 Alpine
 Linux.
 
-While not officially supported, the community has also provided packages for [Arch][] and Kali
-Linux.
-
 > [!NOTE]
 > Debian 10+, CentOS 8+, Ubuntu 20.04, Alpine and Arm currently do not support WinRM remoting. For
-> details on setting up SSH-based remoting, see [PowerShell Remoting over SSH][].
+> details on setting up SSH-based remoting, see [PowerShell Remoting over SSH][ssh].
 
 For up-to-date information about supported operating systems and support lifecycle, see the
-[PowerShell Support Lifecycle][].
+[PowerShell Support Lifecycle][lifecycle].
 
 ### New universal install packages for Linux distributions
 
@@ -86,34 +82,40 @@ PowerShell work.
 
 ### Microsoft Update support for Windows
 
-- Microsoft Update support - See the announcement on the
-  [PowerShell Blog](https://devblogs.microsoft.com/powershell/preview-updating-powershell-7-2-with-microsoft-update/).
-  - `ADD_MU=1` (default) will opt-in to updating through Microsoft update or WSUS
-  - `ADD_MU=0` will opt-out of updating through Microsoft update or WSUS
-  - `ENABLE_MU=1` (default) will opt-in to using Microsoft Update the Automatic Updates or Windows
-    Update
-  - `ENABLE_MU=0` will opt-out of using Microsoft Update the Automatic Updates or Windows Update
+PowerShell 7.2 add support for Microsoft Update. When you enable this feature, you'll get the latest
+PowerShell 7 updates in your traditional Windows Update (WU) management flow, whether that's with
+Windows Update for Business, WSUS, SCCM, or the interactive WU dialog in Settings.
+
+The PowerShell 7.2 MSI package includes following command-line options:
+
+- `USE_MU` - This property has two possible values:
+  - `1` (default) - Opts into updating through Microsoft Update or WSUS
+  - `0` -  Do not opt into updating through Microsoft Update or WSUS
+- `ENABLE_MU`
+  - `1` (default) - Opts into using Microsoft Update the Automatic Updates or Windows Update
+  - `0` - Do not opt into using Microsoft Update the Automatic Updates or Windows Update
 
 ## Experimental Features
 
-For more information about the Experimental Features, see [Using Experimental Features][].
+For more information about the Experimental Features, see [Using Experimental Features][exp].
 
 The following experimental features are now mainstream features in this release:
 
 - `Microsoft.PowerShell.Utility.PSImportPSDataFileSkipLimitCheck`
 - `Microsoft.PowerShell.Utility.PSManageBreakpointsInRunspace`
-- `PSAnsiRendering` - see [about_ANSI_Terminals][]
-- `PSAnsiProgress` - see [about_ANSI_Terminals][]
+- `PSAnsiRendering` - see [about_ANSI_Terminals][ansi]
+- `PSAnsiProgress` - see [about_ANSI_Terminals][ansi]
 - `PSCultureInvariantReplaceOperator`
 - `PSNotApplyErrorActionToStderr`
 - `PSUnixFileStat`
 
 The following experimental features were added in this release:
 
-- [PSNativeCommandArgumentPassing][] - When this experimental feature is enabled PowerShell uses the
-  **ArgumentList** property of the **StartProcessInfo** object rather than our current mechanism of
-  reconstructing a string when invoking a native executable. This feature adds a new automatic
-  variable `$PSNativeCommandArgumentPassing` that allows you to select the behavior at runtime.
+- [PSNativeCommandArgumentPassing][native] - When this experimental feature is enabled PowerShell
+  uses the **ArgumentList** property of the **StartProcessInfo** object rather than our current
+  mechanism of reconstructing a string when invoking a native executable. This feature adds a new
+  automatic variable `$PSNativeCommandArgumentPassing` that allows you to select the behavior at
+  runtime.
 
 ## Improved Tab Completions
 
@@ -144,25 +146,16 @@ improve usability.
 - Restrict `New-Object` in **NoLanguage** mode under lock down (#14140)
 - Enforce AppLocker Deny configuration before Execution Policy Bypass configuration (#15035)
 
-## Known issues
-
-- Some filesystem cmdlets do not work correctly with long paths, such as Remove-Item, Rename-Item
-  and Set-Location. For details see: #15466
-- PSReadLine 2.2.0-beta1 and 2.2.0-beta2 do not work with this preview of PowerShell due to breaking
-  changes in the prediction interface. The upcoming PSReadLine 2.2.0-beta3 release will resolve
-  this. Use PSReadLine 2.1.0 as the temporary workaround.
-
 <!-- reference links -->
 
-[Using Experimental Features]: ../learn/experimental-features.md
-[PSNativeCommandArgumentPassing]: ../learn/experimental-features.md#psnativecommandargumentpassing
 [announced]: https://devblogs.microsoft.com/powershell/announcing-powershell-7-2/
-[CHANGELOG]: https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG/7.2.md
+[ansi]: /powershell/module/microsoft.powershell.core/about/about_ansi_terminals
 [Arch]: https://aur.archlinux.org/packages/powershell/
+[CHANGELOG]: https://github.com/PowerShell/PowerShell/blob/master/CHANGELOG/7.2.md
+[exp]: ../learn/experimental-features.md
+[lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [Linux]: /powershell/scripting/install/installing-powershell-core-on-linux
 [macOS]: /powershell/scripting/install/installing-powershell-core-on-macos
+[native]: ../learn/experimental-features.md#psnativecommandargumentpassing
+[ssh]: /powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core
 [Windows]: /powershell/scripting/install/installing-powershell-core-on-windows
-[Microsoft Store package]: https://www.microsoft.com/store/apps/9MZ1SNWT0N5D
-[PowerShell Remoting over SSH]: /powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core
-[PowerShell Support Lifecycle]: /powershell/scripting/powershell-support-lifecycle
-[about_ANSI_Terminals]: /powershell/module/microsoft.powershell.core/about/about_ansi_terminals
