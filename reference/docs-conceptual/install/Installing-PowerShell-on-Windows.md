@@ -13,7 +13,7 @@ There are multiple ways to install PowerShell in Windows.
 
 You can check the version that you are currently using by running `winver.exe`.
 
-## Download the installer package
+## <a id="msi" />Installing the MSI package
 
 To install PowerShell on Windows, download the [latest][current] install package from GitHub. You
 can also find the latest [preview][preview] version. Scroll down to the **Assets** section of the
@@ -24,12 +24,10 @@ Release page. The **Assets** section may be collapsed, so you may need to click 
 > different version of PowerShell, adjust the command to match the version you need. To see all
 > PowerShell releases, visit the [releases][releases] page in the PowerShell repository on GitHub.
 
-## <a id="msi" />Installing the MSI package
-
 The MSI file looks like `PowerShell-<version>-win-<os-arch>.msi`. For example:
 
-- `PowerShell-7.1.3-win-x64.msi`
-- `PowerShell-7.1.3-win-x86.msi`
+- `PowerShell-7.1.4-win-x64.msi`
+- `PowerShell-7.1.4-win-x86.msi`
 
 Once downloaded, double-click the installer and follow the prompts.
 
@@ -91,7 +89,7 @@ installation options:
 The following example shows how to silently install PowerShell with all the install options enabled.
 
 ```powershell
-msiexec.exe /package PowerShell-7.1.3-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1
+msiexec.exe /package PowerShell-7.1.4-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1
 ```
 
 For a full list of command-line options for `Msiexec.exe`, see
@@ -102,10 +100,10 @@ For a full list of command-line options for `Msiexec.exe`, see
 PowerShell binary ZIP archives are provided to enable advanced deployment scenarios. Download one of
 the following ZIP archives from the [current release][current] page.
 
-- PowerShell-7.1.3-win-x64.zip
-- PowerShell-7.1.3-win-x86.zip
-- PowerShell-7.1.3-win-arm64.zip
-- PowerShell-7.1.3-win-arm32.zip
+- PowerShell-7.1.4-win-x64.zip
+- PowerShell-7.1.4-win-x86.zip
+- PowerShell-7.1.4-win-arm64.zip
+- PowerShell-7.1.4-win-arm32.zip
 
 Depending on how you download the file you may need to unblock the file using the `Unblock-File`
 cmdlet. Unzip the contents to the location of your choice and run `pwsh.exe` from there. Unlike
@@ -130,7 +128,7 @@ Windows 10 IoT Enterprise comes with Windows PowerShell, which we can use to dep
 ```powershell
 # Replace the placeholder information for the following variables:
 $deviceip = '<device ip address'
-$zipfile = 'PowerShell-7.1.3-win-Arm64.zip'
+$zipfile = 'PowerShell-7.1.4-win-Arm64.zip'
 $downloadfolder = 'u:\users\administrator\Downloads'  # The download location is local to the device.
     # There should be enough  space for the zip file and the unzipped contents.
 
@@ -143,10 +141,10 @@ Copy-Item $zipfile -Destination $downloadfolder -ToSession $S
 #Connect to the device and expand the archive
 Enter-PSSession $S
 Set-Location u:\users\administrator\Downloads
-Expand-Archive .\PowerShell-7.1.3-win-Arm64.zip
+Expand-Archive .\PowerShell-7.1.4-win-Arm64.zip
 
 # Set up remoting to PowerShell 7
-Set-Location .\PowerShell-7.1.3-win-Arm64
+Set-Location .\PowerShell-7.1.4-win-Arm64
 # Be sure to use the -PowerShellHome parameter otherwise it tries to create a new
 # endpoint with Windows PowerShell 5.1
 .\Install-PowerShellRemoting.ps1 -PowerShellHome .
@@ -158,7 +156,7 @@ PowerShell has to restart WinRM. Now you can connect to PowerShell 7 endpoint on
 ```powershell
 
 # Be sure to use the -Configuration parameter. If you omit it, you connect to Windows PowerShell 5.1
-Enter-PSSession -ComputerName $deviceIp -Credential Administrator -Configuration PowerShell.7.1.3
+Enter-PSSession -ComputerName $deviceIp -Credential Administrator -Configuration PowerShell.7.1.4
 ```
 
 ## Deploying on Windows 10 IoT Core
@@ -167,9 +165,8 @@ Windows 10 IoT Core adds Windows PowerShell when you include _IOT_POWERSHELL_ fe
 use to deploy PowerShell 7. The steps defined above for Windows 10 IoT Enterprise can be followed
 for IoT Core as well.
 
-For adding the latest PowerShell in the shipping image, use
-[Import-PSCoreRelease][Import-PSCoreRelease] command to include the package in the workarea and add
-_OPENSRC_POWERSHELL_ feature to your image.
+For adding the latest PowerShell in the shipping image, use [Import-PSCoreRelease][iotimport]
+command to include the package in the workarea and add _OPENSRC_POWERSHELL_ feature to your image.
 
 > [!NOTE]
 > For ARM64 architecture, Windows PowerShell is not added when you include _IOT_POWERSHELL_. So the
@@ -208,7 +205,7 @@ Deploy PowerShell to Nano Server using the following steps.
 # Replace the placeholder information for the following variables:
 $ipaddr = '<Nano Server IP address>'
 $credential = Get-Credential # <An Administrator account on the system>
-$zipfile = 'PowerShell-7.1.3-win-x64.zip'
+$zipfile = 'PowerShell-7.1.4-win-x64.zip'
 # Connect to the built-in instance of Windows PowerShell
 $session = New-PSSession -ComputerName $ipaddr -Credential $credential
 # Copy the file to the Nano Server instance
@@ -216,7 +213,7 @@ Copy-Item $zipfile c:\ -ToSession $session
 # Enter the interactive remote session
 Enter-PSSession $session
 # Extract the ZIP file
-Expand-Archive -Path C:\PowerShell-7.1.3-win-x64.zip -DestinationPath 'C:\Program Files\PowerShell 7'
+Expand-Archive -Path C:\PowerShell-7.1.4-win-x64.zip -DestinationPath 'C:\Program Files\PowerShell 7'
 ```
 
 If you want WSMan-based remoting, follow the instructions to create a remoting endpoint using the
@@ -253,10 +250,10 @@ winget search Microsoft.PowerShell
 ```
 
 ```Output
-Name                      Id                                Version
----------------------------------------------------------------------------
-PowerShell                Microsoft.PowerShell              7.1.3
-PowerShell-Preview        Microsoft.PowerShell-Preview      7.2.0-preview.5
+Name               Id                           Version
+-------------------------------------------------------
+PowerShell         Microsoft.PowerShell         7.1.4.0
+PowerShell Preview Microsoft.PowerShell.Preview 7.2.0.8
 ```
 
 Install a version of PowerShell using the `--exact` parameter
@@ -325,15 +322,15 @@ cannot support those methods.
 <!-- link references -->
 
 [client-faq]: /lifecycle/faq/windows
-[modern]: /lifecycle/#gp/LifeWinFAQ
-[eol-windows]: /lifecycle/products/?terms=Windows%20Server&products=windows
-[mu-faq]: microsoft-update-faq.yml
 [current]: https://aka.ms/powershell-release?tag=stable
-[preview]: https://aka.ms/powershell-release?tag=preview
-[lts]: https://aka.ms/powershell-release?tag=lts
-[ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
-[wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
-[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
-[winget]: /windows/package-manager/winget
+[eol-windows]: /lifecycle/products/?terms=Windows%20Server&products=windows
+[iotimport]: https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease
 [instance]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md#executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register
-[Import-PSCoreRelease]: https://github.com/ms-iot/iot-adk-addonkit/blob/master/Tools/IoTCoreImaging/Docs/Import-PSCoreRelease.md#Import-PSCoreRelease
+[lts]: https://aka.ms/powershell-release?tag=lts
+[modern]: /lifecycle/#gp/LifeWinFAQ
+[mu-faq]: microsoft-update-faq.yml
+[preview]: https://aka.ms/powershell-release?tag=preview
+[releases]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../learn/remoting/SSH-Remoting-in-PowerShell-Core.md
+[winget]: /windows/package-manager/winget
+[wsman-remoting]: ../learn/remoting/WSMan-Remoting-in-PowerShell-Core.md
