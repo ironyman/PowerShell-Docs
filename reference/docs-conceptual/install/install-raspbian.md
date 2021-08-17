@@ -28,8 +28,8 @@ Download the tar.gz package from the [releases][releases] page onto your openSUS
 links to the current versions are:
 
 - PowerShell 7.2-preview.8 - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-7.2.0-preview.8-linux-arm32.tar.gz`
-- PowerShell 7.1.3 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-arm32.tar.gz`
-- PowerShell 7.0.6 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/powershell-7.0.6-linux-arm32.tar.gz`
+- PowerShell 7.1.4 - `https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-linux-arm32.tar.gz`
+- PowerShell 7.0.7 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-7.0.7-linux-arm32.tar.gz`
 
 Use the following shell commands to download and install the package. Change the URL to match the
 PowerShell version that you want to install.
@@ -49,13 +49,13 @@ sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 # Download and extract PowerShell
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-7.1.3-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-7.1.4-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh

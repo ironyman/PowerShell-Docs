@@ -45,38 +45,15 @@ sections:
           computers into to receiving PowerShell 7 updates.
           `HKLM:\SOFTWARE\Microsoft\PowerShellCore\UseMU` as a DWord with the value 1
 
-Not able to use MU
-Another issue when you have GP enabling WSUS, is there is a possibility that the domain admin may or may not let you use WU or MU.
-This policy is under Manage updates offered from Windows Server Update Service (see image 3).
-The policy is called Do not connect to any Windows Update internet locations
-GP on MU/WU.
-Group policy can be configured in a way to force you into Microsoft Update or not let you use it.
-The policy is under Manage End User Experience (see image 2) and the policy is Configure Automatic Updates
-
-
-      - question:
+      - question: Not able to use MU
         answer: |
+          Another issue when you have GP enabling WSUS, is there is a possibility that the domain
+          admin may or may not let you use WU or MU. This policy is under Manage updates offered
+          from Windows Server Update Service (see image 3). The policy is called Do not connect to
+          any Windows Update internet locations
 
-      - question:
+      - question: GP on MU/WU.
         answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
-
-      - question:
-        answer: |
+          Group policy can be configured in a way to force you into Microsoft Update or not let you
+          use it. The policy is under Manage End User Experience (see image 2) and the policy is
+          Configure Automatic Updates
