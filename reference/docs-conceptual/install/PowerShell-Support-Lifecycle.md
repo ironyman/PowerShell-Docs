@@ -47,13 +47,13 @@ Based on these lifecycle policies, the following table lists the dates when vari
 longer be supported.
 
 |      Version      |      End-of-support       |
-| :---------------: | ------------------------- |
+| ----------------- | ------------------------- |
 | 7.2 (LTS-preview) | November 2024 (projected) |
-|   7.1 (current)   | March 2022  (projected)   |
-|     7.0 (LTS)     | December 3, 2022          |
-|        6.2        | September 4, 2020         |
-|        6.1        | September 28, 2019        |
-|        6.0        | February 13, 2019         |
+| 7.1 (current)     | March 2022  (projected)   |
+| 7.0 (LTS)         | December 3, 2022          |
+| 6.2               | September 4, 2020         |
+| 6.1               | September 28, 2019        |
+| 6.0               | February 13, 2019         |
 
 ## Supported platforms
 
@@ -187,23 +187,22 @@ for historical reference. It is not intended for use to determine the support li
 
 <!-- hyperlink references -->
 
-[paid]: https://support.serviceshub.microsoft.com/supportforbusiness
-[enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise
+[assisted]: https://support.microsoft.com/assistedsupportproducts
 [assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default
 [community]: /powershell/scripting/community/community-support
-[pshub]: /powershell/scripting/community/community-support
-[pscommunity]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
-[assisted]: https://support.microsoft.com/assistedsupportproducts
-[modern]: /lifecycle/policies/modern
-[Long-Term]: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
-[semi-annual]: /windows-server/get-started-19/servicing-channels-19
-[mit]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
-[lifecycle]: /lifecycle/faq/windows
+[enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise
 [exp]: /powershell/scripting/learn/experimental-features
+[lifecycle]: /lifecycle/faq/windows
+[Long-Term]: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+[mit]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
+[modern]: /lifecycle/policies/modern
 [mssec]: https://www.microsoft.com/msrc/windows-security-servicing-criteria
-[WDAC]: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control
-[net60os]: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
-[net50os]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
 [net31os]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
+[net50os]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
+[net60os]: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
+[paid]: https://support.serviceshub.microsoft.com/supportforbusiness
+[pscommunity]: https://techcommunity.microsoft.com/t5/PowerShell/ct-p/WindowsPowerShell
+[pshub]: /powershell/scripting/community/community-support
 [raspbian]: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
-
+[semi-annual]: /windows-server/get-started-19/servicing-channels-19
+[WDAC]: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control

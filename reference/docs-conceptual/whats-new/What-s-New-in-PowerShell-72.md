@@ -1,7 +1,7 @@
 ---
 title: What's New in PowerShell 7.2
 description: New features and changes released in PowerShell 7.2
-ms.date: 05/25/2021
+ms.date: 08/17/2021
 ---
 
 # What's New in PowerShell 7.2
@@ -62,12 +62,8 @@ Check the installation instructions for your preferred operating system:
 - [macOS][macOS]
 - [Linux][Linux]
 
-Additionally, PowerShell 7.2 supports ARM32 and ARM64 flavors of Debian, Ubuntu, and ARM64 Alpine
-Linux.
-
-> [!NOTE]
-> Debian 10+, CentOS 8+, Ubuntu 20.04, Alpine and Arm currently do not support WinRM remoting. For
-> details on setting up SSH-based remoting, see [PowerShell Remoting over SSH][ssh].
+Additionally, PowerShell 7.2 supports ARM32 and ARM64 builds of Debian, Ubuntu, and ARM64 Alpine
+Linux and an ARM64 build for macOS .
 
 For up-to-date information about supported operating systems and support lifecycle, see the
 [PowerShell Support Lifecycle][lifecycle].
@@ -97,8 +93,6 @@ The PowerShell 7.2 MSI package includes following command-line options:
 
 ## Experimental Features
 
-For more information about the Experimental Features, see [Using Experimental Features][exp].
-
 The following experimental features are now mainstream features in this release:
 
 - `Microsoft.PowerShell.Utility.PSImportPSDataFileSkipLimitCheck`
@@ -116,6 +110,8 @@ The following experimental features were added in this release:
   mechanism of reconstructing a string when invoking a native executable. This feature adds a new
   automatic variable `$PSNativeCommandArgumentPassing` that allows you to select the behavior at
   runtime.
+
+For more information about the Experimental Features, see [Using Experimental Features][exp].
 
 ## Improved Tab Completions
 
