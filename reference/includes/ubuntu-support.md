@@ -26,6 +26,12 @@ Only the LTS releases of Ubuntu are officially supported. Microsoft does not sup
 [interim releases][interim] or their equivalent. Interim releases are community supported. For more
 information, see [Community supported distributions][community].
 
+PowerShell is supported on Ubuntu for the following processor architectures.
+
+|         Ubuntu         |     7.0 (LTS)     |   7.1 (current)   | 7.2 (LTS-preview) |
+| ---------------------- | :---------------: | :---------------: | :---------------: |
+| All supported versions | x64, Arm32, Arm64 | x64, Arm32, Arm64 | x64, Arm32, Arm64 |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-ubuntu]: https://wiki.ubuntu.com/Releases
 [interim]: https://ubuntu.com/about/release-cycle

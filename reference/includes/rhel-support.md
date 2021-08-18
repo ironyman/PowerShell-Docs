@@ -21,5 +21,11 @@ they are supported on. These versions remain supported until either the version 
 | &#x2705; 8 | &#x2705;  |   &#x2705;    |     &#x2705;      |
 | &#x2705; 7 | &#x2705;  |   &#x2705;    |     &#x2705;      |
 
+PowerShell is supported on RHEL for the following processor architectures.
+
+|          RHEL          | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+| ---------------------- | :-------: | :-----------: | :---------------: |
+| All supported versions |    x64    |      x64      |    x64, Arm64     |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-rhel]: https://access.redhat.com/support/policy/updates/errata/

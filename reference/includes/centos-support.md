@@ -25,6 +25,12 @@ Microsoft does not officially support PowerShell on the CentOS Stream releases. 
 information, see [Comparing CentOS Linux and CentOS Stream][stream]. CentOS Stream is community
 supported. For more information, see [Community supported distributions][community].
 
+PowerShell is supported on CentOS for the following processor architectures.
+
+|         CentOS         | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+| ---------------------- | :-------: | :-----------: | :---------------: |
+| All supported versions |    x64    |      x64      |        x64        |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-centos]: https://www.centos.org/centos-linux-eol/
 [stream]: https://www.centos.org/cl-vs-cs/

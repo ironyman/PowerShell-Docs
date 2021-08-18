@@ -23,5 +23,11 @@ openSUSE they are supported on. These versions remain supported until either the
 | &#x274c; 15.1 | &#x1f7e1; |   &#x1f7e1;   |     &#x1f7e1;     |
 | &#x274c; 42.3 | &#x1f7e1; |   &#x1f7e1;   |     &#x274c;      |
 
+PowerShell is supported on openSUSE for the following processor architectures.
+
+|        openSUSE        | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+| ---------------------- | :-------: | :-----------: | :---------------: |
+| All supported versions |    x64    |      x64      |        x64        |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-suse]: https://en.opensuse.org/Lifetime

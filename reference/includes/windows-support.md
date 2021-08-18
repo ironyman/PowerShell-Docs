@@ -36,6 +36,16 @@ Windows they are supported on. These versions remain supported until either the 
 > - [Windows client lifecycle FAQ][client-faq]
 > - [Modern Lifecycle Policy FAQ][modern]
 
+PowerShell is supported on Windows for the following processor architectures.
+
+|           Windows            | 7.0 (LTS)  |  7.1 (current)  | 7.2 (LTS-preview) |
+| ---------------------------- | :--------: | :-------------: | :---------------: |
+| Windows Client 8.1           |  x64, x86  |    x64, x86     |     x64, x86      |
+| Windows 10 Client            |  x64, x86  | x64, x86, Arm64 |  x64, x86, Arm64  |
+| Windows Server 2012 R2+      |  x64, x86  |    x64, x86     |     x64, x86      |
+| Windows Server Core 2012 R2+ |  x64, x86  |    x64, x86     |     x64, x86      |
+| Nano Server Version 1803+    | x64, Arm32 |       x64       |        x64        |
+
 [lifecycle]: /powershell/scripting/install/powershell-support-lifecycle
 [eol-windows]: /lifecycle/products/?terms=Windows%20Server&products=windows
 [client-faq]: /lifecycle/faq/windows
