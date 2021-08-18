@@ -6,7 +6,8 @@ ms.date: 08/09/2021
 
 # PowerShell  on Arm processors
 
-PowerShell 7.2 is based on the [.NET 6.0 Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) and supports the following platforms:
+PowerShell 7.2 is based on the [.NET 6.0 Supported OS Lifecycle Policy][net60os] and supports the
+following platforms:
 
 |                 OS                 | Architectures |          Lifecycle           |
 | ---------------------------------- | ------------- | ---------------------------- |
@@ -17,7 +18,8 @@ PowerShell 7.2 is based on the [.NET 6.0 Supported OS Lifecycle Policy](https://
 | Red Hat Enterprise Linux (RHEL) 7+ | Arm64         | [Red Hat][RHEL-lifecycle]    |
 | Ubuntu 20.10, 20.04, 18.04, 16.04  | Arm32, Arm64  | [Ubuntu][Ubuntu-lifecycle]   |
 
-PowerShell 7.1 is based on the [.NET 5.0 Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) and supports the following platforms:
+PowerShell 7.1 is based on the [.NET 5.0 Supported OS Lifecycle Policy][net50os] and supports the
+following platforms:
 
 |                OS                 | Architectures |          Lifecycle           |
 | --------------------------------- | ------------- | ---------------------------- |
@@ -28,7 +30,8 @@ PowerShell 7.1 is based on the [.NET 5.0 Supported OS Lifecycle Policy](https://
 
 Support of PowerShell on Arm is based on the **.NET Core Supported OS Lifecycle Policies**.
 
-PowerShell 7.0 is based on the [.NET Core 3.1 Supported OS Lifecycle Policy](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) and supports the following platforms:
+PowerShell 7.0 is based on the [.NET Core 3.1 Supported OS Lifecycle Policy][net31os] and supports
+the following platforms:
 
 |                OS                 | Architectures |          Lifecycle           |
 | --------------------------------- | ------------- | ---------------------------- |
@@ -57,9 +60,12 @@ Raspbery Pi
 
 - [Raspberry Pi OS](install-raspbian.md)
 
-[Windows-lifecycle]: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet
 [Alpine-lifecycle]: https://alpinelinux.org/releases/
 [Debian-lifecycle]: https://wiki.debian.org/DebianReleases
-[Ubuntu-lifecycle]: https://wiki.ubuntu.com/Releases
 [macOS-lifecycle]: https://support.apple.com/macos
+[net31os]: https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md
+[net50os]: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
+[net60os]: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
 [RHEL-lifecycle]: https://access.redhat.com/support/policy/updates/errata/
+[Ubuntu-lifecycle]: https://wiki.ubuntu.com/Releases
+[Windows-lifecycle]: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet

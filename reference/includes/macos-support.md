@@ -16,7 +16,7 @@ Windows they are supported on. These versions remain supported until either the 
 - When both the version of the OS and the version of PowerShell have &#x2705;, that combination is
   supported
 
-|             Windows              | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+|              macOS               | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
 | -------------------------------- | :-------: | :-----------: | :---------------: |
 | &#x2705; macOS Big Sur 11.5      | &#x2705;  |   &#x2705;    |     &#x2705;      |
 | &#x2705; macOS Catalina 10.15    | &#x2705;  |   &#x2705;    |     &#x2705;      |
@@ -27,6 +27,14 @@ Support of macOS is defined by Apple. For more information, see:
 
 - [Apple Support Sitemap](https://support.apple.com/sitemap)
 - [Apple Security Updates](https://support.apple.com/en-us/HT201222)
+
+PowerShell is supported on openSUSE for the following processor architectures.
+
+|          macOS           | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+| ------------------------ | :-------: | :-----------: | :---------------: |
+| macOS Big Sur 11.5       |    x64    |      x64      |    x64, Arm64     |
+| macOS High Sierra 10.13+ |    x64    |      x64      |        x64        |
+
 
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-windows]: /lifecycle/products/?terms=Windows%20Server&products=windows

@@ -24,5 +24,11 @@ they're supported on. These versions remain supported until either the version o
 | &#x274c; 31 | &#x1f7e1; |   &#x1f7e1;   |     &#x274c;      |
 | &#x274c; 30 | &#x1f7e1; |   &#x1f7e1;   |     &#x274c;      |
 
+PowerShell is supported on Fedora for the following processor architectures.
+
+|         Fedora         | 7.0 (LTS) | 7.1 (current) | 7.2 (LTS-preview) |
+| ---------------------- | :-------: | :-----------: | :---------------: |
+| All supported versions |    x64    |      x64      |        x64        |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-fedora]: https://fedoraproject.org/wiki/End_of_life

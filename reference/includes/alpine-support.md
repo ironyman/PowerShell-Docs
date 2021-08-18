@@ -27,5 +27,11 @@ they're supported on. These versions remain supported until either the version o
 > [!NOTE]
 > CIM, PowerShell Remoting, and DSC are not supported on Alpine.
 
+PowerShell is supported on Alpine for the following processor architectures.
+
+|         Alpine         | 7.0 (LTS)  | 7.1 (current) | 7.2 (LTS-preview) |
+| ---------------------- | :--------: | :-----------: | :---------------: |
+| All supported versions | x64, Arm64 |   x64,Arm64   | x64, Arm32, Arm64 |
+
 [lifecycle]: /powershell/scripting/powershell-support-lifecycle
 [eol-alpine]: https://alpinelinux.org/releases/
