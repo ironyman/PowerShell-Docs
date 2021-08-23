@@ -8,7 +8,7 @@ ms.date: 08/16/2021
 There are many distributions of Linux that are not officially supported by Microsoft. In some cases,
 PowerShell may be supported by the community for these releases.
 
-In order to be supported by Microsoft, the Linux distribution must meet the following criteria:
+To be supported by Microsoft, the Linux distribution must meet the following criteria:
 
 - The version and architecture of the distribution is supported by .NET Core.
 - The version of the distribution is supported for at least one year.
@@ -24,18 +24,18 @@ also get help from these [PowerShell Community][pscommunity] resources.
 
 ## CentOS Stream
 
-The currently documented steps to install PowerShell on [CentOS Linux](install-centos.md) may work
-on CentOS Stream. However, Microsoft does not officially support PowerShell on the CentOS Stream
-releases. CentOS Stream distributions are continuously updated. This falls into the category of an
-interim release.
+The documented steps to install PowerShell on [CentOS Linux](install-centos.md) may work on CentOS
+Stream. However, Microsoft does not officially support PowerShell on the CentOS Stream releases.
+CentOS Stream distributions are continuously updated. This falls into the category of an interim
+release.
 
 For more information, see [Comparing CentOS Linux and CentOS Stream][stream].
 
 ## Ubuntu interim releases
 
-The currently documented steps to install PowerShell on [Ubuntu](install-ubuntu.md) may work on
-Ubuntu interim releases. However, PowerShell is only supported on the LTS releases of Ubuntu.
-Microsoft does not support [interim releases][interim] of Ubuntu.
+The documented steps to install PowerShell on [Ubuntu](install-ubuntu.md) may work on Ubuntu interim
+releases. However, PowerShell is only supported on the LTS releases of Ubuntu. Microsoft does not
+support [interim releases][interim] of Ubuntu.
 
 ## Arch Linux
 
