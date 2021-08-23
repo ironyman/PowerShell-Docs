@@ -77,7 +77,7 @@ For more information, see [Install PowerShell on Ubuntu](install-ubuntu.md).
 > .NET is not supported on ARMv6 architecture devices, including Raspberry Pi Zero and Raspberry Pi
 > devices prior to Raspberry Pi 2.
 
-For more information, see [Install PowerShell on Raspbery Pi OS](install-raspbian.md).
+For more information, see [Install PowerShell on Raspberry Pi OS](install-raspbian.md).
 
 ## Community supported distributions
 
