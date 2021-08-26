@@ -144,8 +144,6 @@ improve usability.
 
 <!-- reference links -->
 
-[Using Experimental Features]: ../learn/experimental-features.md
-[PSNativeCommandArgumentPassing]: ../learn/experimental-features.md#psnativecommandargumentpassing
 [announced]: https://devblogs.microsoft.com/powershell/announcing-powershell-7-2/
 [ansi]: /powershell/module/microsoft.powershell.core/about/about_ansi_terminals
 [Arch]: https://aur.archlinux.org/packages/powershell/
