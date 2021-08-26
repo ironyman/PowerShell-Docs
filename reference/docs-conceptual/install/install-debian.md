@@ -37,14 +37,6 @@ version is:
   - Debian 10 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-lts_7.0.7-1.debian.10_amd64.deb`
   - Debian 9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.0.7/powershell-lts_7.0.7-1.debian.9_amd64.deb`
 
-Use the following shell commands to install the package you downloaded. Change the filename to match
-the PowerShell and OS version that you downloaded.
-
-```sh
-sudo dpkg -i powershell-preview_7.2.0-preview.8-1.deb_amd64.deb
-sudo apt-get install -f
-```
-
 ### Installation on Debian 10 via Package Repository
 
 PowerShell for Linux is published to package repositories for easy installation and updates.
