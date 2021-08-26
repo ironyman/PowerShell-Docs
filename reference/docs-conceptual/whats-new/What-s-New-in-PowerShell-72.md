@@ -8,6 +8,9 @@ ms.date: 08/17/2021
 
 On November {X}, 2021 we [announced][announced] the general availability of PowerShell 7.2. The
 long-term-servicing (LTS) release is built on .NET 6.0.
+
+PowerShell 7.2 includes the following features, updates, and breaking changes.
+
 - PSReadLine 2.2 with just-in-time help and command predictions
 - Improved DSC support in PowerShell 7
   - Removed PSDesiredStateConfiguration - must install from the PowerShell Gallery
@@ -141,6 +144,8 @@ improve usability.
 
 <!-- reference links -->
 
+[Using Experimental Features]: ../learn/experimental-features.md
+[PSNativeCommandArgumentPassing]: ../learn/experimental-features.md#psnativecommandargumentpassing
 [announced]: https://devblogs.microsoft.com/powershell/announcing-powershell-7-2/
 [ansi]: /powershell/module/microsoft.powershell.core/about/about_ansi_terminals
 [Arch]: https://aur.archlinux.org/packages/powershell/
