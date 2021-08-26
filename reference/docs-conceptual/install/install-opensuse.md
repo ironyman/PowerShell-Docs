@@ -18,17 +18,17 @@ openSUSE uses zypper as the package manager.
 
 [!INCLUDE [openSUSE support](../../includes/opensuse-support.md)]
 
-### Installation PowerShell 7.2-preview.8
+### Installation PowerShell 7.2-preview.9
 
 PowerShell 7.2 introduced a universal package that makes installation easier. Download the universal
 package from the [releases][releases] page onto your openSUSE computer. The link to the current
 version is:
 
-- PowerShell 7.2-preview.8 - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-preview-7.2.0_preview.8-1.rh.x86_64.rpm`
+- PowerShell 7.2-preview.9 - `https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.9/powershell-preview-7.2.0_preview.9-1.rh.x86_64.rpm`
 
 ```sh
 # Download and install the universal package
-sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.8/powershell-preview-7.2.0_preview.8-1.rh.x86_64.rpm
+sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.9/powershell-preview-7.2.0_preview.9-1.rh.x86_64.rpm
 ```
 
 ### Installation older versions of PowerShell
